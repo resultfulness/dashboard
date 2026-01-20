@@ -3,5 +3,5 @@ interface OrdersProps {
 }
 
 export default function Orders({ type }: OrdersProps) {
-    return <div>orders/{type}</div>;
+    return <div>orders{type && `/${type}`}</div>;
 }

@@ -30,7 +30,7 @@ createRoot(document.getElementById("root")!).render(
                     <Route element={<SubpageLayout />}>
                         <Route path="reviews" element={<Reviews />} />
                         <Route path="assessment" element={<Assessment />} />
-                        <Route path="orders">
+                        <Route path="orders" element={<Orders />}>
                             <Route
                                 path="unsent"
                                 element={<Orders type="unsent" />}
