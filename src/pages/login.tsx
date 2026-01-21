@@ -1,3 +1,7 @@
+import Button from "../components/atoms/button";
+
 export default function Login() {
-    return <div>login</div>;
+    return <div>
+        <Button>Button</Button>
+    </div>;
 }

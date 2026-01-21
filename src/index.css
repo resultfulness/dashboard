@@ -12,6 +12,16 @@
 
     --shadow-md: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.1);
+
+    --font-family: Comme, sans-serif;
+
+    --font-huge: 700 3.5rem var(--font-family);
+    --font-title: 700 1.5rem var(--font-family);
+    --font-heading: 700 1.25rem var(--font-family);
+    --font-content: 1rem var(--font-family);
+    --font-emph: 500 1rem var(--font-family);
+    --font-label: 0.875rem var(--font-family);
+    --font-subtitle: 0.75rem var(--font-family);
 }
 
 :root[data-theme="dark"] {
@@ -38,8 +48,5 @@ body {
     margin: 0;
     color: var(--clr-text);
     background-color: var(--clr-base);
-}
-
-input, button, select {
-    font: inherit;
+    font: var(--font-content);
 }

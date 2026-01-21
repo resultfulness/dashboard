@@ -1,0 +1,28 @@
+.button {
+    border: none;
+    cursor: pointer;
+}
+
+.button-primary {
+    font: var(--font-emph);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-surface);
+}
+
+.button-primary:hover {
+    background-color: var(--clr-primary-dim);
+}
+
+.button-secondary {
+    font: var(--font-label);
+    background-color: var(--clr-surface);
+    color: var(--clr-text);
+    border-radius: 100vw;
+    padding: 0.375rem 0.75rem;
+}
+
+.button-secondary:hover {
+    background-color: var(--clr-surface-light);
+}
