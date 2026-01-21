@@ -1,6 +1,7 @@
 .button {
     border: none;
     cursor: pointer;
+    box-shadow: var(--shadow-sm);
 }
 
 .button-primary {

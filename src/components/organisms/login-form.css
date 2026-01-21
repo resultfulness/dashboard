@@ -6,6 +6,7 @@
     background-color: var(--clr-background);
     width: min-content;
     border-radius: 1rem;
+    box-shadow: var(--shadow-md);
 }
 
 .login-form > .text-heading {

@@ -12,7 +12,7 @@ interface IconProps {
     theme?: "light" | "dark";
 }
 
-export default function Icon({ icon, size = 24, theme = "dark" }: IconProps) {
+export default function Icon({ icon, size = 16, theme = "dark" }: IconProps) {
     function iconFile() {
         if (theme === "dark") {
             switch (icon) {

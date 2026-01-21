@@ -5,6 +5,7 @@
     background-color: var(--clr-surface);
     color: var(--clr-text);
     font: var(--font-label);
+    box-shadow: var(--shadow-sm);
 }
 
 .input:focus {

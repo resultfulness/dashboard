@@ -23,4 +23,12 @@ function toggle() {
     localStorage.setItem("theme", theme);
 }
 
-export default { init, toggle };
+function get() {
+    const theme = document.documentElement.getAttribute("data-theme");
+    if (theme === null || theme !== "light" && theme !== "dark") {
+        throw new Error("theme invalid; call theme.init()");
+    }
+    return theme;
+}
+
+export default { init, toggle, get };

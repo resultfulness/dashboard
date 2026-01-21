@@ -1,0 +1,23 @@
+.dropdown {
+    background-color: var(--clr-surface);
+    border: 1px solid var(--clr-surface);
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--clr-text);
+    font: var(--font-emph);
+    gap: 0.5rem;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.dropdown:hover {
+    background-color: var(--clr-surface-light);
+    border-color: var(--clr-surface-light);
+}
+
+.dropdown-active.dropdown-active {
+    border-color: var(--clr-primary);
+    background-color: var(--clr-surface-light);
+}
