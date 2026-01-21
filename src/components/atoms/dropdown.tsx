@@ -12,7 +12,7 @@ export default function Dropdown({ label }: DropdownProps) {
 
     return (
         <button
-            className={`dropdown ${active && "dropdown-active"}`}
+            className={`dropdown ${active ? "dropdown-active" : ""}`}
             onClick={() => setactive(!active)}
         >
             <Icon
