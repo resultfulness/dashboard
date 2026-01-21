@@ -1,5 +1,4 @@
 import "./dropdown.css";
-import theme from "../../theme";
 import Icon from "./icon";
 import { useState } from "react";
 

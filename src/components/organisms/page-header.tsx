@@ -7,7 +7,7 @@ import TextPageTitle from "../atoms/text-page-title";
 import Dropdown from "../atoms/dropdown";
 import Avatar from "../atoms/avatar";
 import IconButton from "../molecules/icon-button";
-import theme from "../../theme";
+import { useTheme } from "../../contexts/theme";
 import Separator from "../atoms/separator";
 
 interface PageHeaderProps {
@@ -21,6 +21,7 @@ export default function PageHeader({
 }: PageHeaderProps) {
     const { t } = useTranslation();
     const navigate = useNavigate();
+    const { theme, toggle } = useTheme();
 
     return (
         <header className="page-header">
@@ -39,8 +40,8 @@ export default function PageHeader({
                 <Separator />
                 <Dropdown label="EN" />
                 <IconButton
-                    onclick={() => theme.toggle()}
-                    icon={theme.get() === "light" ? "moon" : "sun"}
+                    onclick={() => toggle()}
+                    icon={theme === "light" ? "moon" : "sun"}
                 />
             </div>
         </header>

@@ -1,4 +1,4 @@
-import t from "../../theme";
+import { useTheme } from "../../contexts/theme";
 
 export interface IconProps {
     icon:
@@ -14,7 +14,11 @@ export interface IconProps {
     theme?: "light" | "dark";
 }
 
-export default function Icon({ icon, size = 16, theme = t.get() }: IconProps) {
+export default function Icon({
+    icon,
+    size = 16,
+    theme = useTheme().theme,
+}: IconProps) {
     function iconFile() {
         if (theme === "dark") {
             switch (icon) {
