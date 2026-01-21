@@ -1,3 +1,4 @@
-.page-title {
+.text-page-title {
     font: var(--font-title);
+    margin: 0;
 }

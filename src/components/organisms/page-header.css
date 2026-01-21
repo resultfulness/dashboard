@@ -1,0 +1,18 @@
+.page-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    background-color: var(--clr-background);
+    padding: 0.5rem;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+.page-header-right {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-header > .text-page-title {
+    text-align: center;
+}

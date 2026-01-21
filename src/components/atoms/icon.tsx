@@ -1,3 +1,5 @@
+import t from "../../theme";
+
 export interface IconProps {
     icon:
         | "arrow-up"
@@ -12,7 +14,7 @@ export interface IconProps {
     theme?: "light" | "dark";
 }
 
-export default function Icon({ icon, size = 16, theme = "dark" }: IconProps) {
+export default function Icon({ icon, size = 16, theme = t.get() }: IconProps) {
     function iconFile() {
         if (theme === "dark") {
             switch (icon) {

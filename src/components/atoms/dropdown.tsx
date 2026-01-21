@@ -15,10 +15,7 @@ export default function Dropdown({ label }: DropdownProps) {
             className={`dropdown ${active ? "dropdown-active" : ""}`}
             onClick={() => setactive(!active)}
         >
-            <Icon
-                icon={active ? "arrow-up" : "arrow-down"}
-                theme={theme.get()}
-            />
+            <Icon icon={active ? "arrow-up" : "arrow-down"} />
             <span>{label}</span>
         </button>
     );

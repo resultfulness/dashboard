@@ -1,16 +1,16 @@
 import "./icon-button.css";
-import theme from "../../theme";
 import Button from "../atoms/button";
 import Icon, { type IconProps } from "../atoms/icon";
 
 interface IconButtonProps {
     icon: IconProps["icon"];
+    onclick?: () => void;
 }
 
-export default function IconButton({ icon }: IconButtonProps) {
+export default function IconButton({ icon, onclick }: IconButtonProps) {
     return (
-        <Button variant="secondary" className="icon">
-            <Icon icon={icon} theme={theme.get()} size={20} />
+        <Button variant="secondary" className="icon" onclick={onclick}>
+            <Icon icon={icon} size={20} />
         </Button>
     );
 }

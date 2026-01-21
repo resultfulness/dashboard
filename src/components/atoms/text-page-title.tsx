@@ -1,4 +1,4 @@
-import "text-page-title.css";
+import "./text-page-title.css";
 
 interface TextPageTitleProps {
     children: React.ReactNode;
