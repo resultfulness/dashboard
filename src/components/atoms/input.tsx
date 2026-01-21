@@ -1,7 +1,6 @@
-import type { ChangeEvent } from "react";
 import "./input.css";
 
-interface InputProps {
+export interface InputProps {
     value?: string;
     name?: string;
     placeholder?: string;
