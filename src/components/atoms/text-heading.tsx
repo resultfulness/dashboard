@@ -1,3 +1,5 @@
+import "./text-heading.css";
+
 interface TextHeadingProps {
     children: React.ReactNode;
     level: 1 | 2 | 3 | 4 | 5 | 6;

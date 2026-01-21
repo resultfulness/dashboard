@@ -1,21 +1,9 @@
-import Button from "../components/atoms/button";
-import Input from "../components/atoms/input";
-import TextHeading from "../components/atoms/text-heading";
-import FormField from "../components/molecules/form-field";
+import LoginForm from "../components/organisms/login-form";
 
 export default function Login() {
     return (
         <div>
-            <TextHeading level={2}>Heading</TextHeading>
-            <Input />
-            <Button>Button</Button>
-
-            <FormField
-                label="foo"
-                inputProps={{
-                    placeholder: "bar",
-                }}
-            />
+            <LoginForm />
         </div>
     );
 }

@@ -1,0 +1,13 @@
+.login-form {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--clr-background);
+    width: min-content;
+    border-radius: 1rem;
+}
+
+.login-form > .text-heading {
+    text-align: center;
+}
