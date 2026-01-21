@@ -11,6 +11,7 @@
 .page-header-right {
     display: flex;
     gap: 0.5rem;
+    justify-content: end;
 }
 
 .page-header > .text-page-title {
