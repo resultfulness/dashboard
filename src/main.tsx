@@ -9,7 +9,6 @@ import Orders from "./pages/orders.tsx";
 import Reviews from "./pages/reviews.tsx";
 
 import AuthLayout from "./layouts/auth-layout.tsx";
-import MainLayout from "./layouts/main-layout.tsx";
 import SubpageLayout from "./layouts/subpage-layout.tsx";
 
 import AuthProvider from "./contexts/auth.tsx";
@@ -24,9 +23,7 @@ createRoot(document.getElementById("root")!).render(
                 <Routes>
                     <Route path="login" element={<Login />} />
                     <Route element={<AuthLayout />}>
-                        <Route element={<MainLayout />}>
-                            <Route index element={<Index />} />
-                        </Route>
+                        <Route index element={<Index />} />
                         <Route element={<SubpageLayout />}>
                             <Route path="reviews" element={<Reviews />} />
                             <Route path="assessment" element={<Assessment />} />

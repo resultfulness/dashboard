@@ -1,0 +1,40 @@
+.main-dashboard {
+    max-width: 896px;
+    margin-inline: auto;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto auto auto;
+}
+
+.dashboard-orders {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.dashboard-reviews {
+    grid-column: 2;
+    grid-row: 1 / 2;
+}
+
+.dashboard-top-offers {
+    grid-column: 1 / -1;
+    grid-row: 4;
+}
+
+.dashboard-assessment {
+    grid-column: 1;
+    grid-row: 2 / 3;
+}
+
+.dashboard-sales-chart {
+    grid-column: 1 / -1;
+    grid-row: 5;
+}
+
+.dashboard-recommendations {
+    grid-column: 2;
+    grid-row: 3;
+}
