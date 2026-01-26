@@ -3,6 +3,7 @@
     border-radius: 0.75rem;
     background-color: var(--clr-surface);
     display: grid;
+    box-shadow: var(--shadow-sm);
 }
 
 .highlight-card-value {
