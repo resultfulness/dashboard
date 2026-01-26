@@ -1,0 +1,16 @@
+.highlight-card {
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--clr-surface);
+    display: grid;
+}
+
+.highlight-card-value {
+    text-align: center;
+    padding-block: 1rem;
+}
+
+.highlight-card-highlight {
+    background-color: var(--clr-primary);
+    color: var(--clr-surface);
+}

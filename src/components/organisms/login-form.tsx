@@ -16,12 +16,8 @@ export default function LoginForm() {
         e.preventDefault();
         const fd = new FormData(e.target as HTMLFormElement);
 
-        const username = fd.get("username")?.toString();
-        const password = fd.get("password")?.toString();
-
-        if (!username || !password) {
-            return;
-        }
+        const username = fd.get("username")?.toString() ?? "";
+        const password = fd.get("password")?.toString() ?? "";
 
         auth.login(username, password);
         navigate("/");

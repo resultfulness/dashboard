@@ -1,0 +1,4 @@
+.highlight-card-array {
+    display: grid;
+    gap: 0.5rem;
+}

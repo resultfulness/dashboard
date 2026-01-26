@@ -1,0 +1,12 @@
+.widget {
+    padding: 1rem;
+    background-color: var(--clr-background);
+    border-radius: 0.75rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: auto 1fr;
+}
+
+.widget-content {
+    display: grid;
+}

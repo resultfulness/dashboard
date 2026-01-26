@@ -9,7 +9,11 @@ import MainDashboard from "../components/templates/main-dashboard";
 export default function Index() {
     return (
         <MainDashboard
-            OrdersWidget={<OrdersWidget />}
+            OrdersWidget={<OrdersWidget data={{
+                unpaid: 0,
+                unsent: 0,
+                returns: 12,
+            }} />}
             ReviewsWidget={<ReviewsWidget />}
             TopOffersWidget={<TopOffersWidget />}
             AssessmentWidget={<AssessmentWidget />}
