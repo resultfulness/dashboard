@@ -25,14 +25,14 @@ export default function PageHeader({
 
     return (
         <header className="page-header">
-            {withBacklink ? (
-                <Button onclick={() => navigate("/")} variant="secondary">
-                    <Icon icon="arrow-left" />
-                    {t("back to dashboard")}
-                </Button>
-            ) : (
-                <div></div>
-            )}
+            <div>
+                {withBacklink && (
+                    <Button onclick={() => navigate("/")} variant="secondary">
+                        <Icon icon="arrow-left" />
+                        {t("back to dashboard")}
+                    </Button>
+                )}
+            </div>
             <TextPageTitle>{title}</TextPageTitle>
             <div className="page-header-right">
                 <Dropdown label={t("accounts")} />

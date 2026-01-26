@@ -1,0 +1,8 @@
+.subpage {
+    max-width: 896px;
+    margin-inline: auto;
+}
+
+.subpage-content {
+    margin-top: 1rem;
+}
