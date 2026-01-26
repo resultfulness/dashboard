@@ -6,6 +6,16 @@
     box-shadow: var(--shadow-sm);
 }
 
+button.highlight-card {
+    text-align: left;
+    border: none;
+    cursor: pointer;
+}
+
+button.highlight-card:hover {
+    background-color: var(--clr-surface-light);
+}
+
 .highlight-card-value {
     text-align: center;
     padding-block: 1rem;
@@ -14,4 +24,8 @@
 .highlight-card-highlight {
     background-color: var(--clr-primary);
     color: var(--clr-surface);
+}
+
+button.highlight-card-highlight:hover {
+    background-color: var(--clr-primary-dim);
 }

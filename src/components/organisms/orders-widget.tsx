@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Widget from "../molecules/widget";
 import HighlightCardArray from "../molecules/highlight-card-array";
+import { useNavigate } from "react-router";
 
 interface OrdersWidgetProps {
     data: {
@@ -12,14 +13,27 @@ interface OrdersWidgetProps {
 
 export default function OrdersWidget({ data }: OrdersWidgetProps) {
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     return (
         <Widget title={t("orders")}>
             <HighlightCardArray
                 entries={[
-                    { label: t("unpaid"), value: data.unpaid },
-                    { label: t("unsent"), value: data.unsent },
-                    { label: t("returns"), value: data.returns },
+                    {
+                        label: t("unpaid"),
+                        value: data.unpaid,
+                        onclick: () => navigate("/orders/unpaid"),
+                    },
+                    {
+                        label: t("unsent"),
+                        value: data.unsent,
+                        onclick: () => navigate("/orders/unsent"),
+                    },
+                    {
+                        label: t("returns"),
+                        value: data.returns,
+                        onclick: () => navigate("/orders/returns"),
+                    },
                 ]}
             />
         </Widget>

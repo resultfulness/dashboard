@@ -2,7 +2,11 @@ import "./highlight-card-array.css";
 import HighlightCard from "./highlight-card";
 
 interface HighlightCardArrayProps {
-    entries: { label: string; value: number }[];
+    entries: {
+        label: string;
+        value: number;
+        onclick?: () => void;
+    }[];
 }
 
 export default function HighlightCardArray({
@@ -13,8 +17,8 @@ export default function HighlightCardArray({
             className="highlight-card-array"
             style={{ gridTemplateColumns: `repeat(${entries.length}, 1fr)` }}
         >
-            {entries.map(({ label, value }) => (
-                <HighlightCard value={value} label={label} />
+            {entries.map(({ label, value, onclick }) => (
+                <HighlightCard value={value} label={label} onclick={onclick} />
             ))}
         </div>
     );
