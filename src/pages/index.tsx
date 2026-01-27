@@ -16,8 +16,8 @@ export default function Index() {
             ReviewsWidget={<ReviewsWidget data={dashboard.reviews} />}
             TopOffersWidget={<TopOffersWidget data={dashboard.offers} />}
             AssessmentWidget={<AssessmentWidget data={dashboard.quality}/>}
-            SalesChartWidget={<SalesChartWidget />}
             RecommendationsWidget={<RecommendationsWidget data={dashboard.recommendations} />}
+            SalesChartWidget={<SalesChartWidget data={dashboard.sales} />}
         />
     );
 }

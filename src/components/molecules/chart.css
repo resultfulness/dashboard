@@ -1,0 +1,20 @@
+.chart {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 0.5rem;
+}
+
+.chart-graph {
+    background-color: var(--clr-surface);
+    border-radius: 0.75rem;
+    position: relative;
+    padding: 1rem;
+    padding-left: 70px;
+    padding-bottom: 40px;
+    padding-right: 44px;
+}
+
+.chart-settings {
+    display: grid;
+    gap: 0.5rem;
+}

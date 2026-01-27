@@ -22,6 +22,10 @@ export type SellerQuality = {
     returns: number;
     packaging: number;
     pricing: number;
+export type Sale = {
+    amount: number;
+    totalPrice: number;
+    date: Date;
 };
 
 export type Dashboard = {
@@ -34,6 +38,7 @@ export type Dashboard = {
     reviews: Review[];
     quality: SellerQuality;
     recommendations: string[];
+    sales: Sale[];
 };
 
 type DashboardContext = {
@@ -156,5 +161,40 @@ function mockDashboard(): Dashboard {
                 uniqueViews: 723,
             },
         ],
+        sales: [...mockSalesExp()],
     };
+}
+
+function mockSalesExp() {
+    const sales = [];
+    const now = new Date();
+    const days = 14;
+
+    for (let i = 0; i < days; i++) {
+        const date = new Date(now);
+        date.setDate(now.getDate() - (days - i));
+        date.setHours(12, 0, 0, 0);
+
+        const g = Math.pow(1.25, i);
+        const amount = Math.round(1 * g);
+        const totalPrice =
+            Math.round((10 + Math.random() * 99) * g * 100) / 100;
+
+        sales.push({ date, amount, totalPrice });
+    }
+
+    const hours = 24;
+    for (let i = 0; i < hours; i++) {
+        const date = new Date(now);
+        date.setHours(i, 30, 0, 0);
+        
+        const g =  Math.pow(1.25, i);
+        const amount = Math.round(1 * g);
+        const totalPrice =
+            Math.round((10 + Math.random() * 99) * g * 100) / 100;
+
+        sales.push({ date, amount, totalPrice });
+    }
+
+    return sales;
 }

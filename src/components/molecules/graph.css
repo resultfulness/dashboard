@@ -1,0 +1,19 @@
+.graph {
+    display: grid;
+    height: 170px;
+}
+
+.graph-bar-graph {
+    display: flex;
+    align-items: end;
+    gap: 0.125rem;
+}
+
+.graph-bar {
+    flex-basis: 100%;
+    background-color: var(--clr-outline);
+}
+
+.graph-bar:last-child {
+    background-color: var(--clr-primary);
+}
