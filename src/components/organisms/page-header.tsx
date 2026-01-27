@@ -11,6 +11,7 @@ import { useTheme } from "../../contexts/theme";
 import Separator from "../atoms/separator";
 import LanguageSelectMenu from "./language-select-menu";
 import { useState } from "react";
+import AccountsMenu from "./accounts-menu";
 
 interface PageHeaderProps {
     withBacklink?: boolean;
@@ -25,6 +26,7 @@ export default function PageHeader({
     const navigate = useNavigate();
     const { theme, toggle } = useTheme();
     const [showLangMenu, setShowLangMenu] = useState(false);
+    const [showAccountsMenu, setShowAccountsMenu] = useState(false);
 
     return (
         <header className="page-header">
@@ -40,7 +42,7 @@ export default function PageHeader({
             <div className="page-header-right">
                 <Dropdown
                     label={t("accounts")}
-                    onchangeopen={() => {}}
+                    onchangeopen={open => setShowAccountsMenu(open)}
                 />
                 <Avatar />
                 <Separator />
@@ -55,6 +57,9 @@ export default function PageHeader({
                 />
                 <div className="language-select-menu-container">
                     {showLangMenu && <LanguageSelectMenu />}
+                </div>
+                <div className="accounts-menu-container">
+                    {showAccountsMenu && <AccountsMenu />}
                 </div>
             </div>
         </header>
