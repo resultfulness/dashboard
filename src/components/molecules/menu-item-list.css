@@ -1,0 +1,10 @@
+.menu-item-list {
+    border-radius: 0.25rem;
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    max-width: max-content;
+    box-shadow: var(--shadow-md);
+}

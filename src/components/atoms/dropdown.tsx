@@ -1,20 +1,31 @@
 import "./dropdown.css";
 import Icon from "./icon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface DropdownProps {
     label: string;
+    onchangeopen: (open: boolean) => void;
+    width?: string;
 }
 
-export default function Dropdown({ label }: DropdownProps) {
-    const [active, setactive] = useState(false);
+export default function Dropdown({
+    label,
+    onchangeopen,
+    width,
+}: DropdownProps) {
+    const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        onchangeopen(open);
+    }, [open]);
 
     return (
         <button
-            className={`dropdown ${active ? "dropdown-active" : ""}`}
-            onClick={() => setactive(!active)}
+            className={`dropdown ${open ? "dropdown-active" : ""}`}
+            onClick={() => setOpen(!open)}
+            style={{ width }}
         >
-            <Icon icon={active ? "arrow-up" : "arrow-down"} />
+            <Icon icon={open ? "arrow-up" : "arrow-down"} />
             <span>{label}</span>
         </button>
     );

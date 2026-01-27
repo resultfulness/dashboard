@@ -4,6 +4,7 @@
     background-color: var(--clr-surface);
     display: grid;
     box-shadow: var(--shadow-sm);
+    color: var(--clr-text);
 }
 
 button.highlight-card {
