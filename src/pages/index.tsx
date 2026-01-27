@@ -13,11 +13,11 @@ export default function Index() {
     return (
         <MainDashboard
             OrdersWidget={<OrdersWidget data={dashboard.orders} />}
-            ReviewsWidget={<ReviewsWidget />}
+            ReviewsWidget={<ReviewsWidget data={dashboard.reviews} />}
             TopOffersWidget={<TopOffersWidget data={dashboard.offers} />}
-            AssessmentWidget={<AssessmentWidget />}
+            AssessmentWidget={<AssessmentWidget data={dashboard.quality}/>}
             SalesChartWidget={<SalesChartWidget />}
-            RecommendationsWidget={<RecommendationsWidget />}
+            RecommendationsWidget={<RecommendationsWidget data={dashboard.recommendations} />}
         />
     );
 }

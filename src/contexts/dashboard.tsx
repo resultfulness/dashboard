@@ -9,6 +9,21 @@ export type Offer = {
     uniqueViews: number;
 };
 
+export type Review = {
+    reviewer: string;
+    score: number;
+    reviewText: string;
+    date: string;
+};
+
+export type SellerQuality = {
+    quick_response: number;
+    quick_sending: number;
+    returns: number;
+    packaging: number;
+    pricing: number;
+};
+
 export type Dashboard = {
     orders: {
         unpaid: number;
@@ -16,6 +31,9 @@ export type Dashboard = {
         returns: number;
     };
     offers: Offer[];
+    reviews: Review[];
+    quality: SellerQuality;
+    recommendations: string[];
 };
 
 type DashboardContext = {
@@ -61,6 +79,46 @@ function mockDashboard(): Dashboard {
             unsent: 0,
             returns: 12,
         },
+        recommendations:[],
+        quality: {
+            quick_response: 8,
+            quick_sending: 4,
+            returns: 2,
+            packaging: 10,
+            pricing: 6,
+        },
+        reviews: [
+            {
+                reviewer: "Teto",
+                score: 5,
+                reviewText: "Nie wiedział",
+                date: "1945-11-20",
+            },
+            {
+                reviewer: "Michalina Hatrzyńska",
+                score: 4,
+                reviewText: "",
+                date: "2026-01-01",
+            },
+            {
+                reviewer: "TheFoka",
+                score: 1,
+                reviewText: "",
+                date: "2011-11-11",
+            },
+            {
+                reviewer: "Akitka Nerkowska",
+                score: 2,
+                reviewText: "Nie uwierzycie co sie wydarzylo",
+                date: "0030-04-07",
+            },
+            {
+                reviewer: "Kaikowska Juki",
+                score: 5,
+                reviewText: "Opóźniony pociąg",
+                date: "2019-12-24",
+            },
+        ],
         offers: [
             {
                 name: "Computer",

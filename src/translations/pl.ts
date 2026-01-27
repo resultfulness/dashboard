@@ -22,6 +22,26 @@ const translation = {
     "sort by most sold": "Posortuj po sprzedanych malejąco",
     "sort by least sold": "Posortuj po sprzedanych rosnąco",
     "no offers to show": "Brak ofert do wyświetlenia",
+
+    "all": "Wszystkie",
+    "positive": "Pozytywne",
+    "negative": "Negatywne",
+    "open_reviews": "Otwórz opinie",
+    "no_reviews": "Brak recenzji",
+
+    "open_assessment": "Otwórz Jakość sprzedaży",
+    "assessment": "Jakość sprzedaży",
+    "quality_score": "Ocena jakości",
+    "quality_tier": "Poziom jakości",
+    "worst_areas": "Najgorsze obszary",
+    "quick_response": "Prędkość odpowiedzi",
+    "quick_sending": "Predkość wysyłki",
+    "packaging": "Zapakowanie",
+    "pricing": "Wycena",
+    "no_assessment": "Brak oceny jakości",
+
+    "recommendations": "Porady sprzedażowe",
+    "no_recommendations": "Brak porad sprzedażowych"
 } as const;
 
 export default { translation };
