@@ -15,6 +15,7 @@ import AuthProvider from "./contexts/auth.tsx";
 import ThemeProvider from "./contexts/theme.tsx";
 
 import "./i18n";
+import { DashboardProviderLayout } from "./contexts/dashboard.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <ThemeProvider>
@@ -23,23 +24,28 @@ createRoot(document.getElementById("root")!).render(
                 <Routes>
                     <Route path="login" element={<Login />} />
                     <Route element={<AuthLayout />}>
-                        <Route index element={<Index />} />
-                        <Route element={<SubpageLayout />}>
-                            <Route path="reviews" element={<Reviews />} />
-                            <Route path="assessment" element={<Assessment />} />
-                            <Route path="orders">
+                        <Route element={<DashboardProviderLayout />}>
+                            <Route index element={<Index />} />
+                            <Route element={<SubpageLayout />}>
+                                <Route path="reviews" element={<Reviews />} />
                                 <Route
-                                    path="unsent"
-                                    element={<Orders type="unsent" />}
+                                    path="assessment"
+                                    element={<Assessment />}
                                 />
-                                <Route
-                                    path="unpaid"
-                                    element={<Orders type="unpaid" />}
-                                />
-                                <Route
-                                    path="returns"
-                                    element={<Orders type="returns" />}
-                                />
+                                <Route path="orders">
+                                    <Route
+                                        path="unsent"
+                                        element={<Orders type="unsent" />}
+                                    />
+                                    <Route
+                                        path="unpaid"
+                                        element={<Orders type="unpaid" />}
+                                    />
+                                    <Route
+                                        path="returns"
+                                        element={<Orders type="returns" />}
+                                    />
+                                </Route>
                             </Route>
                         </Route>
                     </Route>

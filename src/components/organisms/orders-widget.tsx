@@ -2,13 +2,10 @@ import { useTranslation } from "react-i18next";
 import Widget from "../molecules/widget";
 import HighlightCardArray from "../molecules/highlight-card-array";
 import { useNavigate } from "react-router";
+import type { Dashboard } from "../../contexts/dashboard";
 
 interface OrdersWidgetProps {
-    data: {
-        unpaid: number;
-        unsent: number;
-        returns: number;
-    };
+    data: Dashboard["orders"];
 }
 
 export default function OrdersWidget({ data }: OrdersWidgetProps) {

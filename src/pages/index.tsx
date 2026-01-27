@@ -5,15 +5,14 @@ import ReviewsWidget from "../components/organisms/reviews-widget";
 import SalesChartWidget from "../components/organisms/sales-chart-widget";
 import TopOffersWidget from "../components/organisms/top-offers-widget";
 import MainDashboard from "../components/templates/main-dashboard";
+import { useDashboard } from "../contexts/dashboard";
 
 export default function Index() {
+    const { dashboard } = useDashboard();
+
     return (
         <MainDashboard
-            OrdersWidget={<OrdersWidget data={{
-                unpaid: 0,
-                unsent: 0,
-                returns: 12,
-            }} />}
+            OrdersWidget={<OrdersWidget data={dashboard.orders} />}
             ReviewsWidget={<ReviewsWidget />}
             TopOffersWidget={<TopOffersWidget />}
             AssessmentWidget={<AssessmentWidget />}
