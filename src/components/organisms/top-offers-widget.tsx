@@ -53,7 +53,7 @@ export default function TopOffersWidget({ data }: TopOffersWidgetProps) {
             if (sort === "least sold") {
                 setHeaderLabels([
                     t("name"),
-                    t("image"),
+                    t("offer_image"),
                     t("amount sold"),
                     t("unique views"),
                 ]);
@@ -61,14 +61,14 @@ export default function TopOffersWidget({ data }: TopOffersWidgetProps) {
             } else if (sort === "most sold") {
                 setHeaderLabels([
                     t("name"),
-                    t("image"),
+                    t("offer_image"),
                     t("amount sold"),
                     t("turnover"),
                 ]);
                 setValues(tableifyBottom(data, 5));
             }
         }
-    }, [data, sort]);
+    }, [data, sort, t]);
 
     return (
         <Widget
