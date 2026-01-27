@@ -14,7 +14,7 @@ export default function Index() {
         <MainDashboard
             OrdersWidget={<OrdersWidget data={dashboard.orders} />}
             ReviewsWidget={<ReviewsWidget />}
-            TopOffersWidget={<TopOffersWidget />}
+            TopOffersWidget={<TopOffersWidget data={dashboard.offers} />}
             AssessmentWidget={<AssessmentWidget />}
             SalesChartWidget={<SalesChartWidget />}
             RecommendationsWidget={<RecommendationsWidget />}

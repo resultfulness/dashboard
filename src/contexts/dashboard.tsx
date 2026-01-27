@@ -1,17 +1,26 @@
 import React, { createContext, useContext, useState } from "react";
 import { Outlet } from "react-router";
 
+export type Offer = {
+    name: string;
+    image: string;
+    amountSold: number;
+    turnover: number;
+    uniqueViews: number;
+};
+
 export type Dashboard = {
     orders: {
         unpaid: number;
         unsent: number;
         returns: number;
     };
+    offers: Offer[];
 };
 
 type DashboardContext = {
-    dashboard: Dashboard,
-}
+    dashboard: Dashboard;
+};
 
 const DashboardContext = createContext<DashboardContext | undefined>(undefined);
 
@@ -25,7 +34,7 @@ export default function DashboardProvider({
     const [dashboard, _] = useState<Dashboard>(mockDashboard());
 
     return (
-        <DashboardContext.Provider value={{dashboard}}>
+        <DashboardContext.Provider value={{ dashboard }}>
             {children}
         </DashboardContext.Provider>
     );
@@ -52,5 +61,42 @@ function mockDashboard(): Dashboard {
             unsent: 0,
             returns: 12,
         },
+        offers: [
+            {
+                name: "Computer",
+                image: "/computer.png",
+                amountSold: 999,
+                turnover: 999_000,
+                uniqueViews: 652,
+            },
+            {
+                name: "Palmtop",
+                image: "/palmtop.png",
+                amountSold: 333,
+                turnover: 333_000,
+                uniqueViews: 2382,
+            },
+            {
+                name: "Laptop",
+                image: "/laptop.png",
+                amountSold: 555,
+                turnover: 555_000,
+                uniqueViews: 12387,
+            },
+            {
+                name: "PC",
+                image: "/pc.png",
+                amountSold: 777,
+                turnover: 777_000,
+                uniqueViews: 1781,
+            },
+            {
+                name: "Cellphone",
+                image: "/cellphone.png",
+                amountSold: 111,
+                turnover: 111_000,
+                uniqueViews: 723,
+            },
+        ],
     };
 }
