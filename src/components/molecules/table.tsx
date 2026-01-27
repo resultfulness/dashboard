@@ -19,8 +19,8 @@ export default function Table({ headerLabels, values, equalWidth }: TableProps) 
                 <TableHeader labels={headerLabels} equalWidth={equalWidth} />
             </thead>
             <tbody>
-                {values.map(v => (
-                    <TableRow key={v[0]} values={v} />
+                {values.map((v, i) => (
+                    <TableRow key={i} values={v} />
                 ))}
             </tbody>
         </table>

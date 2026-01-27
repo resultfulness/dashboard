@@ -7,8 +7,8 @@ interface TableRowProps {
 export default function TableRow({ values }: TableRowProps) {
     return (
         <tr>
-            {values.map(v => (
-                <TableCell key={v}>{v}</TableCell>
+            {values.map((v, i) => (
+                <TableCell key={i}>{v}</TableCell>
             ))}
         </tr>
     );

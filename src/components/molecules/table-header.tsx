@@ -7,9 +7,9 @@ interface TableHeaderProps {
 export default function TableHeader({ labels, equalWidth }: TableHeaderProps) {
     return (
         <tr>
-            {labels.map(l => (
+            {labels.map((l, i) => (
                 <TableHeaderCell
-                    key={l}
+                    key={i}
                     width={equalWidth ? `${100 / labels.length}%` : undefined}
                 >
                     {l}

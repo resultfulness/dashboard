@@ -2,7 +2,7 @@ import "./highlight-card.css";
 import TextLabel from "../atoms/text-label";
 import TextHuge from "../atoms/text-huge";
 
-interface HighlightCardProps {
+export interface HighlightCardProps {
     value: number;
     label: string;
     onclick?: () => void;
