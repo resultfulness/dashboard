@@ -22,6 +22,12 @@ button.highlight-card:hover {
     padding-block: 1rem;
 }
 
+.highlight-card-value-slim {
+    text-align: center;
+    padding-block: 1rem;
+    font: var(--font-title);
+}
+
 .highlight-card-highlight {
     background-color: var(--clr-primary);
     color: var(--clr-surface);

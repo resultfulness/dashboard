@@ -1,0 +1,19 @@
+.tab {
+    border: none;
+    padding: 4px;
+    text-align: center;
+    background-color: var(--clr-surface);
+    color: var(--clr-text-dim);
+    border-bottom: 2px solid var(--clr-surface-lighter);
+}
+
+.tab-highlight {
+    background-color: var(--clr-surface-light);
+    color: var(--clr-text);
+    border-bottom: 2px solid var(--clr-primary);
+}
+
+.tab:not(.tab-highlight):hover {
+    cursor: pointer;
+    background-color: var(--clr-surface-lighter);
+}

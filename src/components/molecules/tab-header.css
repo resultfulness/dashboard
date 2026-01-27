@@ -1,0 +1,8 @@
+.tab-header {
+    display: flex;
+    flex-flow: row;
+}
+
+.tab-header > .tab {
+    flex: 1;
+}
