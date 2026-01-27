@@ -1,0 +1,22 @@
+.sales-chart-widget-container {
+    position: relative;
+}
+
+.sales-chart-xaxis-menu-container,
+.sales-chart-yaxis-menu-container,
+.sales-chart-type-menu-container {
+    position: absolute;
+    top: calc(100% - 16px);
+}
+
+.sales-chart-xaxis-menu-container {
+    left: 16px;
+}
+
+.sales-chart-yaxis-menu-container {
+    left: calc(33% + 10px);
+}
+
+.sales-chart-type-menu-container {
+    left: calc(66% + 8px)
+}

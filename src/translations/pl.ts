@@ -22,6 +22,20 @@ const translation = {
     "sort by most sold": "Posortuj po sprzedanych malejąco",
     "sort by least sold": "Posortuj po sprzedanych rosnąco",
     "no offers to show": "Brak ofert do wyświetlenia",
+
+    "sales chart": "Wykres Sprzedaży",
+    "monday_short": "Pon",
+    "tuesday_short": "Wto",
+    "wednesday_short": "Śro",
+    "thursday_short": "Czw",
+    "friday_short": "Pią",
+    "saturday_short": "Sob",
+    "sunday_short": "Nie",
+    "today": "Dziś",
+    "this week": "Ten tydzień",
+    "previous week": "Poprzedni tydzień",
+    "bar chart": "Wykres słupkowy",
+    "line chart": "Wykres liniowy",
 } as const;
 
 export default { translation };

@@ -1,3 +1,9 @@
-export default function TextSubtitle() {
-    return <div>TextSubtitle</div>;
+import "./text-subtitle.css";
+
+interface TextSubtitleProps {
+    children: React.ReactNode;
+}
+
+export default function TextSubtitle({children}: TextSubtitleProps) {
+    return <span className="text-subtitle">{children}</span>;
 }

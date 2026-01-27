@@ -2,7 +2,7 @@ import "./dropdown.css";
 import Icon from "./icon";
 import { useEffect, useState } from "react";
 
-interface DropdownProps {
+export interface DropdownProps {
     label: string;
     onchangeopen: (open: boolean) => void;
     width?: string;

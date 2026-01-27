@@ -1,0 +1,46 @@
+.chart-deco {
+    position: absolute;
+    inset: 0.5rem 1.5rem;
+}
+
+.chart-deco-vertical {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    bottom: 32px;
+    left: -1rem;
+    min-width: 56px;
+    padding-right: 4px;
+    text-align: right;
+}
+
+.chart-deco-yaxis {
+    position: absolute;
+    width: 1px;
+    background-color: var(--clr-outline);
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.chart-deco-horizontal {
+    position: absolute;
+    bottom: 0;
+    left: 39px;
+    right: 0;
+    display: grid;
+    text-align: center;
+    padding-inline: 12px;
+    min-height: 32px;
+}
+
+.chart-deco-xaxis {
+    position: absolute;
+    height: 1px;
+    background-color: var(--clr-outline);
+    left: 0;
+    right: 0;
+    top: 0;
+}
