@@ -41,7 +41,7 @@ const translation = {
     "no_assessment": "No assessment",
 
     "recommendations": "Recommendations",
-    "no_recommendations": "No recommendations to show"
+    "no_recommendations": "No recommendations to show",
     "sales chart": "Sales Chart",
     "monday_short": "Mon",
     "tuesday_short": "Tue",

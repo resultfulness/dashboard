@@ -1,9 +1,10 @@
 .subtitled-list-item {
     background-color: var(--clr-surface);
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 12px;
 
     display: grid;
+    gap: 8px;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
 
@@ -11,7 +12,7 @@
     overflow: hidden;
 }
 .subtitled-list-item-highlight {
-    padding-left: 10px;
+    padding-left: 16px;
 }
 
 .subtitled-list-item-highlight::before {
@@ -32,10 +33,10 @@
 }
 
 .subtitled-list-item-label {
-    font: var(--font-heading);
+    font: var(--font-emph);
 }
 
 .subtitled-list-item-text {
-    font: var(--font-content);
+    font: var(--font-label);
     grid-column: 1 / 3;
 }

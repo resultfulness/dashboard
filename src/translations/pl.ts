@@ -41,7 +41,7 @@ const translation = {
     "no_assessment": "Brak oceny jakości",
 
     "recommendations": "Porady sprzedażowe",
-    "no_recommendations": "Brak porad sprzedażowych"
+    "no_recommendations": "Brak porad sprzedażowych",
     "sales chart": "Wykres Sprzedaży",
     "monday_short": "Pon",
     "tuesday_short": "Wto",

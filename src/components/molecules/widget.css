@@ -1,4 +1,5 @@
 .widget {
+    height: 100%;
     padding: 1rem;
     background-color: var(--clr-background);
     border-radius: 0.75rem;

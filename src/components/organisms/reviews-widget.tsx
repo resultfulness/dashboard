@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Widget from "../molecules/widget";
 import type { Dashboard, Review } from "../../contexts/dashboard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import Button from "../atoms/button";
 import Icon from "../atoms/icon";

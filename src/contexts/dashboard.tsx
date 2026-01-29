@@ -22,6 +22,8 @@ export type SellerQuality = {
     returns: number;
     packaging: number;
     pricing: number;
+};
+
 export type Sale = {
     amount: number;
     totalPrice: number;
@@ -54,7 +56,7 @@ interface DashboardProviderProps {
 export default function DashboardProvider({
     children,
 }: DashboardProviderProps) {
-    const [dashboard, _] = useState<Dashboard>(mockDashboard());
+    const [dashboard] = useState<Dashboard>(mockDashboard());
 
     return (
         <DashboardContext.Provider value={{ dashboard }}>
